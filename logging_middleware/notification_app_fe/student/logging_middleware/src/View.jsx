@@ -1,21 +1,18 @@
 import { useState } from "react";
-import All from "./All";
 import Applied from "./Applied";
 import Eligible from "./Eligible";
-function Home() {
+function View() {
     const [view, setView] = useState("all");
     return (
         <div>
             <h1>Welcome to the Job Portal</h1>
             <button onClick={() => setView("all")}>All Companies</button>
             <button onClick={() => setView("applied")}>Applied Companies</button>
-            <button onClick={() => setView("eligible")}>Eligible Companies</button>
-
-                {view === "eligible" && <Eligible />}   
-                    
+            <button onClick={() => setView("eligible")}>Eligible Companies</button> 
+                {view === "eligible" && <Eligible />}
             {view === "all" && <All />}
             {view === "applied" && <Applied />}
         </div>
     );
-}   
-export default Home;    
+}       
+export default View;    
