@@ -4,7 +4,7 @@ function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");               
     const handleSubmit = (e) => {
-        if (username === "admin" && password === "1234") {
+        if (username === "admin" && password === "password") {
             <Home />            
         } else {        
             alert("Invalid credentials. Please try again.");
@@ -21,7 +21,9 @@ function Login() {
 
                     type="text"
                     value={username}            
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={(e) => setUsername(e.target.value)}       
+
+
                 />
             </div>
             <div>
